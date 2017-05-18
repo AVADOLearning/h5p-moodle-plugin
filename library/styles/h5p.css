@@ -448,3 +448,48 @@ div.h5p-fullscreen {
 .h5p-dialog-ok-button:active {
   background: #eeffee;
 }
+
+/* AVADO styling. Note also the submodules have been flattened.*/
+.h5p-interactive-video .h5p-interaction {
+  height:100% !important;
+  width:100% !important;
+  top:0px !important;
+  left:0px !important;
+}
+.h5p-inner.ui-droppable{
+  border:3px dotted #666 !important;
+}
+
+.h5p-answers .h5p-answer .h5p-alternative-container {
+  background-color:#f9f9f9 !important;
+}
+.h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container, .h5p-multichoice .h5p-answer[aria-checked="true"]:hover .h5p-alternative-container {
+  background-color:#eeeeee !important;
+  border-color:#6f6f6f !important;
+}
+.h5p-question-feedback {
+  color:#000000 !important;
+  font-size:1.125em !important;
+}
+.h5p-question-introduction, .h5p-question-feedback{
+  line-height:1.325em !important;
+}
+.h5p-joubelui-button{
+  background:#246ea1 !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius:    4px !important;
+  border-radius:         4px !important;
+  float:right !important;
+}
+.h5p-multichoice .h5p-alternative-container {
+  background:#f9f9f9 !important;
+  box-shadow:0 0 0 0 !important;
+}
+
+.h5p-multichoice .h5p-answer[aria-checked="true"]:focus .h5p-alternative-container, .h5p-multichoice .h5p-answer[aria-checked="true"] .h5p-alternative-container, .h5p-multichoice .h5p-answer[aria-checked="true"]:hover .h5p-alternative-container{
+  background:#eeeeee !important;
+  border-color:#5a5a5a !important;
+}
+.h5p-multichoice .h5p-answer:hover .h5p-alternative-container, .h5p-multichoice .h5p-answer:focus .h5p-alternative-container{
+  background-color:#a7a7a7 !important;
+}
