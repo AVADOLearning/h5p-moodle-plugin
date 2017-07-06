@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "build": "git submodule update --init && cp overrides.css library/styles/h5p.css"
+    "build": "cp overrides.css library/styles/h5p.css"
   }
 }
