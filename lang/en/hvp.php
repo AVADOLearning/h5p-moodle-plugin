@@ -194,6 +194,7 @@ $string['nosuchlibrary'] = 'No such library';
 $string['noparameters'] = 'No parameters';
 $string['invalidparameters'] = 'Invalid Parameters';
 $string['missingcontentuserdata'] = 'Error: Could not find content user data';
+$string['cannotreadfile'] = 'Cannot read file. Either the file does not exist or there is a permission problem.';
 
 $string['maximumgrade'] = 'Maximum grade';
 $string['maximumgradeerror'] = 'Please enter a valid positive integer as the max points available for this activity';

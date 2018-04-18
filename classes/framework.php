@@ -287,6 +287,7 @@ class framework implements \H5PFrameworkInterface {
             // Create mapping.
             // @codingStandardsIgnoreStart
             $translationsmap = [
+                'Cannot read file. Either the file does not exist or there is a permission problem.' => 'cannotreadfile',
                 'Your PHP version does not support ZipArchive.' => 'noziparchive',
                 'The file you uploaded is not a valid HTML5 Package (It does not have the .h5p file extension)' => 'noextension',
                 'The file you uploaded is not a valid HTML5 Package (We are unable to unzip it)' => 'nounzip',
