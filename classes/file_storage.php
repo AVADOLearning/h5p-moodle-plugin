@@ -370,6 +370,29 @@ class file_storage implements \H5PFileStorage {
     }
 
     /**
+    * Get list of filenames and content hashes for activity dependencies.
+    *
+    * @param  array $dependencies List of dependency file paths.
+    * @return array $file_records Array containing filename and contenthash information per dependency.
+    * @throws \coding_exception
+    * @throws \dml_exception
+    */
+    public function getFileRecords(array $dependencies) {
+        global $DB;
+
+        $context = \context_system::instance();
+        list($inorequal, $inparams) = $DB->get_in_or_equal($dependencies);
+        $sql = "SELECT filename, contenthash FROM {files} 
+                WHERE component = 'mod_hvp' 
+                AND contextid = ? 
+                AND filepath {$inorequal} 
+                AND (filename LIKE '%.js' OR filename LIKE '%.css')";
+        $params = array_merge(array($context->id), $inparams);
+
+        return $file_records = $DB->get_records_sql($sql, $params);
+    }
+
+    /**
      * Save files uploaded through the editor.
      *
      * @param \H5peditorFile $file
