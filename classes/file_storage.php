@@ -148,9 +148,12 @@ class file_storage implements \H5PFileStorage {
      */
     // @codingStandardsIgnoreLine
     public function exportLibrary($library, $target) {
-        $folder = \H5PCore::libraryToString($library, true);
-        $context = \context_system::instance();
-        self::exportFileTree("{$target}/{$folder}", $context->id, 'libraries', "/{$folder}/");
+        global $CFG;
+        if (isset($CFG->hvp_mod_export) && $CFG->hvp_mod_export != false) {
+            $folder = \H5PCore::libraryToString($library, true);
+            $context = \context_system::instance();
+            self::exportFileTree("{$target}/{$folder}", $context->id, 'libraries', "/{$folder}/");
+        }
     }
 
     /**
