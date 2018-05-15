@@ -4,8 +4,8 @@
 	branch = stable
 [submodule "editor"]
 	path = editor
-	url = https://github.com/h5p/h5p-editor-php-library.git
-	branch = stable
+	url = https://github.com/AVADOLearning/h5p-editor-php-library.git
+	branch = ALP-355
 [submodule "reporting"]
 	path = reporting
 	url = https://github.com/h5p/h5p-php-report.git
